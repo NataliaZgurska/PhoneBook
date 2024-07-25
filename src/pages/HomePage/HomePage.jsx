@@ -1,8 +1,24 @@
 import { Helmet } from 'react-helmet-async';
 import css from './HomePage.module.css';
-import firstPicture from './tulips-min.jpg';
+import { getImages } from '../../services/gallery.js';
+import { useEffect, useState } from 'react';
 
 const HomePage = () => {
+  const [images, setImages] = useState(null);
+
+  const fetchImages = async () => {
+    try {
+      const data = await getImages();
+      setImages(data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -13,6 +29,8 @@ const HomePage = () => {
           <p className={css.welcomeText}>
             Welcome🎉! Save and manage your contacts
           </p>
+
+          <ImageGallery images={images} />
         </div>
 
         {/* <div className={css.imgWrap}>
