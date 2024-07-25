@@ -1,0 +1,39 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.welcome {
+  font-weight: 700;
+}
+.username {
+  font-weight: 800;
+  color: blue;
+  font-style: italic;
+}
+.btn {
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1);
+  background-color: transparent;
+  color: gray;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  font-style: italic;
+  margin: 0 auto;
+
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+}
+.btn:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  color: red;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

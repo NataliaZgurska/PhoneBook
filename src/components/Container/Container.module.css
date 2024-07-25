@@ -1,0 +1,7 @@
+.container {
+  max-width: 1200px;
+  padding: 0 20px 30px 20px;
+  margin: 0 auto;
+  border-bottom: 1px solid #8080808a;
+  box-shadow: -1px 4px 4px 0px #8080804d;
+}

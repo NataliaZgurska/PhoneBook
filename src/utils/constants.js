@@ -1,0 +1,3 @@
+export const MIN_CHAR_NAME_VALIDATION = 3;
+export const MAX_CHAR_NAME_VALIDATION = 30;
+export const MIN_CHAR_PASSWORD_VALIDATION = 7;

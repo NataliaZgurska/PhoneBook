@@ -1,0 +1,43 @@
+.formContainer {
+  width: 100%;
+}
+
+.formAdd {
+  min-width: 415px;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 600;
+}
+.errorMessage {
+  color: red;
+  font-style: italic;
+}
+
+.btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background-color: #2f85e2;
+  box-shadow: -4px 4px 5px 0px rgba(115, 111, 115, 1);
+
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
+.btn:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

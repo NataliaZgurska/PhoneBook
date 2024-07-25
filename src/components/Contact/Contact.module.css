@@ -1,0 +1,23 @@
+.contactContainer {
+  font-size: 20px;
+  font-weight: 600;
+  width: 260px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.contactPhoneNumber {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.deleteBtn {
+  border: none;
+  background-color: transparent;
+}
+.contactName {
+  color: #256fbe;
+}

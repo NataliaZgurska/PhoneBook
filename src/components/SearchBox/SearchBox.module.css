@@ -1,0 +1,10 @@
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+.searchBoxInput {
+  border: none;
+  border-bottom: 2px solid #bed6f8;
+}
