@@ -1,52 +1,39 @@
-.galleryList {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3px;
-  /* margin-top: 20px; */
-  /* margin-right: 10px;
-  margin-left: 10px; */
+.imgContainer {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.galleryItem {
-  width: 50px;
-  height: 50px;
-
-  opacity: 0;
-  transform: translate3d(-30px, -30px, -30px);
-  animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
-  }
+.imgPicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (min-width: 400px) {
-  .galleryItem {
-    width: 65px;
-    height: 65px;
-  }
-}
-@media screen and (min-width: 500px) {
-  .galleryItem {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .galleryItem {
+  .imgContainer {
     width: 100px;
     height: 100px;
   }
 }
+@media screen and (min-width: 500px) {
+  .imgContainer {
+    width: 120px;
+    height: 120px;
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .imgContainer {
+    width: 150px;
+    height: 150px;
+  }
+}
 @media screen and (min-width: 1024px) {
-  .galleryItem {
+  .imgContainer {
     width: 120px;
     height: 120px;
   }
