@@ -1,8 +1,11 @@
 import { Helmet } from 'react-helmet-async';
-import css from './HomePage.module.css';
 import { getImages } from '../../services/gallery.js';
 import { useEffect, useState } from 'react';
 import ImageGallery from '../../components/ImageGallery/ImageGallery';
+import { TbReload } from 'react-icons/tb';
+
+import css from './HomePage.module.css';
+import style from '../../services/btn.module.css';
 
 const HomePage = () => {
   const [images, setImages] = useState(null);
@@ -32,6 +35,17 @@ const HomePage = () => {
           <p className={css.welcomeText}>
             Welcome! Save and manage your contacts
           </p>
+        </div>
+
+        <div className={css.fixedBtn}>
+          <button
+            type="button"
+            className={style.btn}
+            onClick={() => location.reload()}
+          >
+            <TbReload size={30} />
+            <span className={style.tooltiptext}>Reload page</span>
+          </button>
         </div>
       </div>
     </>

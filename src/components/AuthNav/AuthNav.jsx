@@ -11,11 +11,11 @@ const AuthNav = () => {
   return (
     <div className={css.registrationLoginWrap}>
       <NavLink to="/register" className={getNavLinkClassName}>
-        Registration
+        SignUp
       </NavLink>
 
       <NavLink to="/login" className={getNavLinkClassName}>
-        Login
+        SignIn
       </NavLink>
     </div>
   );

@@ -12,25 +12,25 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  border-radius: 6px;
-  background: linear-gradient(to right, #fff94cab, #004ff9c7);
+  /* border-radius: 6px;
+  background: linear-gradient(to right, #fff94cab, #004ff9c7); */
 }
 
 .welcomeText {
   font-size: 26px;
-
   color: blue;
+  font-weight: 600;
 
-  opacity: 0;
+  /* opacity: 0;
   animation-name: fadeHomePageWelcomeText;
   animation-duration: 3s;
   animation-timing-function: linear;
   animation-delay: 1s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
-@keyframes fadeHomePageWelcomeText {
+/* @keyframes fadeHomePageWelcomeText {
   0% {
     opacity: 0;
   }
@@ -38,6 +38,18 @@
   100% {
     opacity: 1;
   }
+} */
+
+.fixedBtn {
+  position: fixed;
+  bottom: 20px; /* Відступ від нижнього краю */
+  right: 20px; /* Відступ від правого краю */
+  padding: 10px 20px;
+  background-color: #007bff; /* Колір фону */
+  color: white; /* Колір тексту */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /************ 768 *************/

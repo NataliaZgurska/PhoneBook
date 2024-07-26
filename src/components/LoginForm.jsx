@@ -33,7 +33,11 @@ const LoginForm = () => {
 
   return (
     <div className={css.wrap}>
-      <div className={css.formBackground}>
+      <p className={css.welcomeText}>
+        Login and use all the features of this application
+      </p>
+      {/* <div className={css.formBackground}> */}
+      <div>
         <Formik
           initialValues={FORM_INITIAL_VALUES}
           validationSchema={LoginSchema}
@@ -41,7 +45,7 @@ const LoginForm = () => {
         >
           <Form className={css.form}>
             <label className={css.formLabel}>
-              <span>Email:</span>
+              {/* <span>Email:</span> */}
               <Field
                 type="email"
                 name="email"
@@ -55,7 +59,7 @@ const LoginForm = () => {
               />
             </label>
             <label className={css.formLabel}>
-              <span>Password:</span>
+              {/* <span>Password:</span> */}
               <Field
                 type="password"
                 name="password"

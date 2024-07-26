@@ -14,7 +14,7 @@ const SearchBox = () => {
 
       <input
         type="text"
-        placeholder="Search contacts"
+        placeholder="Search contact"
         value={filter}
         onChange={onChangeFilter}
         className={css.searchBoxInput}
