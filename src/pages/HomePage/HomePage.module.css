@@ -39,3 +39,10 @@
     opacity: 1;
   }
 }
+
+/************ 768 *************/
+@media screen and (min-width: 768px) {
+  .homePageContainer {
+    gap: 20px;
+  }
+}

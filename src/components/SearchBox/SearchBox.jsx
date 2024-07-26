@@ -10,11 +10,11 @@ const SearchBox = () => {
 
   return (
     <div className={css.filterContainer}>
-      <p>Search contacts</p>
+      {/* <p>Search contacts</p> */}
 
       <input
         type="text"
-        placeholder="Enter name"
+        placeholder="Search contacts"
         value={filter}
         onChange={onChangeFilter}
         className={css.searchBoxInput}

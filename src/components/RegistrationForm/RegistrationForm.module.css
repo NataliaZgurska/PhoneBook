@@ -125,3 +125,38 @@
 .formAddBtn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+@media screen and (min-width: 768px) {
+  .formBackground {
+    left: 20%;
+    top: 20%;
+    width: 400px;
+    /* height: 420px; */
+  }
+
+  @keyframes fadeCircle {
+    0% {
+      width: 200px;
+      opacity: 0;
+    }
+    25% {
+      width: 250px;
+      opacity: 0.25;
+    }
+    50% {
+      width: 300px;
+      opacity: 0.5;
+    }
+    75% {
+      width: 350px;
+      opacity: 0.75;
+    }
+    100% {
+      width: 400px;
+      opacity: 1;
+    }
+  }
+  .form {
+    left: 0%;
+  }
+}

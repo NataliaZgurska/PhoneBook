@@ -1,4 +1,4 @@
-.contactList {
+/* .contactList {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,4 +10,39 @@
   box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
   border-radius: 10px;
   padding: 10px 10px 10px 18px;
+} */
+
+.contactList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+}
+
+.contactItem {
+  width: 15em;
+  font-size: 1.3em;
+  background-color: white;
+  box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+  border-radius: 10px;
+  padding: 0.2em 0.3em;
+  /* transition: border 0.25s, box-shadow 0.25s, transformX 500ms ease-in-out; */
+  transition: box-shadow 0.25s, transform 500ms ease-in-out,
+    background-color 500ms ease-in-out;
+}
+
+.contactItem:hover {
+  /* box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1); */
+  box-shadow: -4px 5px 5px 0px white;
+  transform: scale(1.02, 1.02);
+  /* background-color: #ffffe0; */
+  background-color: rgba(244, 244, 196, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .contactList {
+    margin-top: 1em;
+    gap: 30px;
+  }
 }

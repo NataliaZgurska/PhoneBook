@@ -5,35 +5,57 @@
 }
 .welcome {
   font-weight: 700;
+  text-align: right;
 }
 .username {
   font-weight: 800;
-  color: blue;
+  color: darkviolet;
   font-style: italic;
 }
-.btn {
-  width: 100px;
+
+.logoutBtn {
+  width: 2em;
   height: 30px;
+
+  position: relative;
+  display: inline-block;
+
+  border: none;
   border-radius: 8px;
-  border: 1px solid gray;
-  box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1);
   background-color: transparent;
-  color: gray;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
   font-style: italic;
-  margin: 0 auto;
-
+  text-align: center;
+  margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
 }
-.btn:hover {
+.logoutBtn:hover {
   background-color: #256fbe;
   box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
-  color: red;
+  color: yellow;
 }
-.btn:focus,
-.btn:focus-visible {
+.logoutBtn:focus,
+.logoutBtn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/******** Підказка LogOut ********/
+.logoutBtn .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: transparent;
+  color: gray;
+  text-align: center;
+  padding: 0;
+
+  top: 35px;
+  right: -130%;
+  position: absolute;
+  z-index: 1;
+}
+.logoutBtn:hover .tooltiptext {
+  visibility: visible;
 }

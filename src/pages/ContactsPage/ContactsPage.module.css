@@ -1,4 +1,4 @@
-.formsContainer {
+/* .formsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,4 +8,24 @@
   padding-top: 18px;
   padding-bottom: 18px;
   margin-bottom: 18px;
+} */
+
+.formsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  /* background-color: #f9f9f6c9;
+  box-shadow: 0px 6px 50px rgba(217, 229, 255, 0.7);
+  border-radius: 10px; */
+  padding-top: 1em;
+  padding-bottom: 18px;
+}
+
+@media screen and (min-width: 1024px) {
+  .formsContainer {
+    flex-direction: row;
+    align-items: end;
+    /* border: 1px solid red; */
+  }
 }

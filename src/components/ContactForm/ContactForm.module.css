@@ -1,4 +1,4 @@
-.formContainer {
+/* .formContainer {
   width: 100%;
 }
 
@@ -40,4 +40,86 @@
 .btn:focus,
 .btn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.formContainer {
+  width: 100%;
+}
+.formAddTitle {
+  font-size: 1em;
+  color: #434343d4;
+  /* margin-bottom: 0.3em; */
+}
+.formAdd {
+  min-width: 310px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  font-size: 1em;
+  font-weight: 600;
+}
+.nameLabel {
+  width: 100%;
+}
+.formInput {
+  width: 100%;
+  height: 2em;
+  background-color: #f9f9f6c9;
+}
+
+.numberBtnWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.numberLabel {
+  width: 17em;
+}
+
+.errorMessage {
+  color: red;
+  font-style: italic;
+}
+
+.addNewbtn {
+  width: 4em;
+  height: 2em;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background-color: #2f85e2;
+  box-shadow: -4px 4px 5px 0px rgba(115, 111, 115, 1);
+
+  color: white;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s;
+}
+.addNewbtn:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+}
+.addNewbtn:focus,
+.addNewbtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media screen and (min-width: 768px) {
+  .formAdd {
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+  }
+  .nameLabel,
+  .numberLabel {
+    width: 17em;
+  }
+  .numberBtnWrap {
+    width: 60%;
+  }
 }

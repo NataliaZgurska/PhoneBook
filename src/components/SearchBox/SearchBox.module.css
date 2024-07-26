@@ -1,4 +1,4 @@
-.filterContainer {
+/* .filterContainer {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -7,4 +7,30 @@
 .searchBoxInput {
   border: none;
   border-bottom: 2px solid #bed6f8;
+} */
+
+.filterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  /* border: 1px solid green; */
+  /* flex-direction: row;
+  gap: 16px;
+  align-items: center; */
+}
+.searchBoxInput {
+  /* margin: 0 auto; */
+  /* background-color: #f9f9f6c9; */
+  background-color: #ebebe7c9;
+  border: none;
+  border-bottom: 2px solid #bed6f8;
+  width: 100%;
+  height: 2.2em;
+  padding-top: 0.5em;
+}
+@media screen and (min-width: 768px) {
+  .searchBoxInput {
+    width: 20em;
+  }
 }
