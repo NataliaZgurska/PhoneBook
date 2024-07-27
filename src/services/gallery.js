@@ -30,6 +30,5 @@ export const getImages = async () => {
 
   //https://api.unsplash.com/search/photos?client_id=r5X1Oa10oS9-BERhXbh0nWixL3GFYc5WhGNcDvhdj7k&page=1&query=cat&per_page=25'
 
-  console.log(data.results);
   return data;
 };

@@ -32,9 +32,9 @@
 import { FaPhone } from 'react-icons/fa6';
 import { MdDeleteForever } from 'react-icons/md';
 import { useState } from 'react';
-import ContactModal from '../ContactModal/ContactModal.jsx';
 
 import css from './Contact.module.css';
+import ContactModal from '../ContactModal/ContactModal';
 
 const Contact = ({ contact }) => {
   const { name, number } = contact;

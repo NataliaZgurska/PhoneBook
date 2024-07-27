@@ -1,8 +1,10 @@
 .header {
   height: 40px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
   border-bottom: 1px solid #2a363b;
+  background: linear-gradient(to right, #004ff9c7, #fff94cab, white);
 }

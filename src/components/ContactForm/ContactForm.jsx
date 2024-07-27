@@ -1,6 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
+import toast, { Toaster } from 'react-hot-toast';
 
 import {
   MAX_CHAR_NAME_VALIDATION,
@@ -29,20 +30,47 @@ const FormSchema = Yup.object().shape({
     .required('Required'),
 });
 
-const ContactForm = () => {
+const ContactForm = ({ closeModal }) => {
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
 
-  const handleSubmit = (values, actions) => {
-    dispatch(addContact(values));
-    if (filter) {
-      dispatch(clearFilter());
+  const handleSubmit = async (values, actions) => {
+    try {
+      const result = await dispatch(addContact(values));
+      if (result.meta.requestStatus === 'fulfilled') {
+        actions.resetForm();
+        closeModal(false);
+      } else {
+        throw new Error('Failed to submit');
+      }
+    } catch (error) {
+      toast.error('An error occurred while submitting the form');
     }
+
+    // if (filter) {
+    //   dispatch(clearFilter());
+    // }
     actions.resetForm();
   };
 
   return (
     <div className={css.formContainer}>
+      <Toaster
+        position="bottom-left"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 4000,
+          error: {
+            style: {
+              border: '3px solid red',
+              background: '#363636',
+              color: '#fff',
+              padding: '16px',
+            },
+          },
+        }}
+      />
+
       <Formik
         initialValues={FORM_INITIAL_VALUES}
         validationSchema={FormSchema}

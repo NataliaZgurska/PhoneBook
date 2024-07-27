@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import ContactForm from '../../components/ContactForm/ContactForm';
@@ -14,8 +14,22 @@ import { MdOutlineAdd } from 'react-icons/md';
 
 import css from './ContactsPage.module.css';
 import style from '../../services/btn.module.css';
+import Modal from 'react-modal';
+import ModalComponent from '../../components/ModalComponent/ModalComponent';
+
+Modal.setAppElement('#root');
 
 const ContactsPage = () => {
+  // *****модальне вікно****
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+  // *******
+
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -44,14 +58,13 @@ const ContactsPage = () => {
       <div className={css.formsContainer}>
         <SearchBox />
 
-        <button
-          type="button"
-          className={style.btn}
-          // onClick={() => dispatch(logout())}
-        >
+        {/* виклик модального вікна */}
+        <button type="button" className={style.btn} onClick={openModal}>
           <MdOutlineAdd size={30} />
           <span className={style.tooltiptext}>Add Contact</span>
         </button>
+
+        <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} />
       </div>
 
       <ContactList />
