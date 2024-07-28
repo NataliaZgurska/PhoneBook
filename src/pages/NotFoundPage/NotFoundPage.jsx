@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
+import css from './NotFoundPage.module.css';
 
 const NotFoundPage = () => {
   const [timer, setTimer] = useState(0);
@@ -12,15 +13,22 @@ const NotFoundPage = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  if (timer === 5) {
+  if (timer === 10) {
     return <Navigate to="/" replace />;
   }
 
   return (
-    <div>
-      <h1>Page you visited doesn&apos;t exist.</h1>
-      <h2>You will be redirected to Home in {5 - timer} seconds</h2>
-      <Link to="/">Go Home</Link>
+    <div className={css.container}>
+      <h2 className={css.title}>Page you visited doesn&apos;t exist</h2>
+
+      <Link className="formBtn" to="/">
+        Come back Home
+      </Link>
+
+      <h3 className={css.timer}>
+        You will be redirected to <span>Home</span> in <span>{10 - timer}</span>{' '}
+        seconds
+      </h3>
     </div>
   );
 };

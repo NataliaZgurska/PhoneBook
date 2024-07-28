@@ -66,11 +66,12 @@ ul {
 }
 a {
   color: blue;
+  text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   color: red;
-}
+} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -88,6 +89,11 @@ body {
 .formBtn {
   width: 200px;
   height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 8px;
   border: 1px solid gray;
   background-color: #2f85e2;
