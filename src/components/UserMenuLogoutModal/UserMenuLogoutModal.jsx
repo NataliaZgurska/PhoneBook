@@ -1,21 +1,20 @@
 import React, { FC } from 'react';
 import { useDispatch } from 'react-redux';
 import ModalComponent from '../ModalComponent/ModalComponent';
-import { deleteContact } from '../../redux/contacts/operations';
+import { logout } from '../../redux/auth/operations';
 
-const ContactDelModal = ({ isOpen, closeModal, contact }) => {
+const UserMenuLogoutModal = ({ isOpen, closeModal }) => {
   const dispatch = useDispatch();
+
   const handleDelete = () => {
-    dispatch(deleteContact(contact.id));
+    dispatch(logout());
     closeModal();
   };
 
   return (
     <ModalComponent isOpen={isOpen} closeModal={closeModal}>
       <div className="modalBoxWrap">
-        <h3 style={{ color: 'red' }}>
-          Are you sure you want to delete {contact.name}?
-        </h3>
+        <h3 style={{ color: 'blue' }}>Do you already leave?</h3>
 
         <div className="modalBtns">
           <button onClick={handleDelete} className="modalBtn">
@@ -30,4 +29,4 @@ const ContactDelModal = ({ isOpen, closeModal, contact }) => {
   );
 };
 
-export default ContactDelModal;
+export default UserMenuLogoutModal;

@@ -1,6 +1,7 @@
 import { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import Modal from 'react-modal';
 
 import RestrictedRoute from './components/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute';
@@ -13,6 +14,8 @@ import Layout from './components/Layout/Layout.jsx';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const ContactsPage = lazy(() => import('./pages/ContactsPage/ContactsPage'));
+
+Modal.setAppElement('#root');
 
 const App = () => {
   const dispatch = useDispatch();

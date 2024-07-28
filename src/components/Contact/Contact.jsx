@@ -64,11 +64,7 @@ const Contact = ({ contact }) => {
           <MdDeleteForever size={30} className={css.deleteBtnImg} />
         </button>
       </div>
-      {/* <ContactModal
-        onCloseModal={onCloseModal}
-        isModalOpen={isModalOpen}
-        contact={contact}
-      /> */}
+
       <ContactDelModal
         isOpen={modalIsOpen}
         closeModal={closeModal}

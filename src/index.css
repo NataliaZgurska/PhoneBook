@@ -123,6 +123,7 @@ body {
   border: none;
   border-radius: 8px;
   background-color: transparent;
+  color: blue;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
@@ -158,4 +159,47 @@ body {
 }
 .btnSmall:hover .tooltiptext {
   visibility: visible;
+}
+
+/******** Модальне вікно ********/
+.modalBoxWrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.modalBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.modalBtn {
+  width: 4em;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  box-shadow: -3px 3px 5px 0px rgba(115, 111, 115, 1);
+  background-color: transparent;
+  color: gray;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  font-style: italic;
+
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+}
+
+.modalBtn:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  color: yellow;
+}
+.modalBtn:focus,
+.logoutBtn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

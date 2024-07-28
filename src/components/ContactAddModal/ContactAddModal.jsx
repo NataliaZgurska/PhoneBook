@@ -6,7 +6,7 @@ const ContactAddModal = ({ isOpen, closeModal }) => {
   return (
     <ModalComponent isOpen={isOpen} closeModal={closeModal}>
       <div className={css.box}>
-        <h2>Add new contact</h2>
+        <h2>Add a new contact</h2>
         <ContactAddForm closeModal={closeModal} />
       </div>
     </ModalComponent>

@@ -8,29 +8,32 @@ import ContactList from '../../components/ContactList/ContactList';
 import Loader from '../../components/Loader/Loader';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { selectError, selectIsLoading } from '../../redux/contacts/selectors';
+import { MdOutlineAdd } from 'react-icons/md';
 import { fetchContacts } from '../../redux/contacts/operations';
 import { clearFilter } from '../../redux/filters/slice';
-import { MdOutlineAdd } from 'react-icons/md';
-
-import css from './ContactsPage.module.css';
+import { selectFilter } from '../../redux/filters/selectors';
 import ContactAddModal from '../../components/ContactAddModal/ContactAddModal';
 
-// Modal.setAppElement('#root');
+import css from './ContactsPage.module.css';
 
 const ContactsPage = () => {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+  const filter = useSelector(selectFilter);
+
   // *****модальне вікно для додавання контакта****
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => {
+    if (filter) {
+      dispatch(clearFilter());
+    }
     setModalIsOpen(true);
   };
   const closeModal = () => {
     setModalIsOpen(false);
   };
   // *******
-
-  const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -56,7 +59,6 @@ const ContactsPage = () => {
       <div className={css.formsContainer}>
         <SearchBox />
 
-        {/* виклик модального вікна */}
         <button type="button" className="btnSmall" onClick={openModal}>
           <MdOutlineAdd size={30} />
           <span className="tooltiptext">Add Contact</span>

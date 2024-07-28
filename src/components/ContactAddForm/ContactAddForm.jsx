@@ -32,7 +32,6 @@ const FormSchema = Yup.object().shape({
 
 const ContactAddForm = ({ closeModal }) => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectFilter);
 
   const handleSubmit = async (values, actions) => {
     try {
@@ -46,10 +45,6 @@ const ContactAddForm = ({ closeModal }) => {
     } catch (error) {
       toast.error('An error occurred while submitting the form');
     }
-
-    // if (filter) {
-    //   dispatch(clearFilter());
-    // }
     actions.resetForm();
   };
 
