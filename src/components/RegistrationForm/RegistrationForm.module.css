@@ -2,14 +2,9 @@
   height: 100vh;
   width: 100vw;
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .welcomeText {
-  /* margin: 0 auto; */
   text-align: center;
   margin: 30px;
 
@@ -111,31 +106,4 @@
 .errorMessage {
   color: red;
   font-style: italic;
-}
-
-.formAddBtn {
-  width: 200px;
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid gray;
-  background-color: #2f85e2;
-  box-shadow: -4px 4px 5px 0px rgba(115, 111, 115, 1);
-
-  color: white;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  margin: 0 auto;
-
-  cursor: pointer;
-  transition: background-color 0.25s, box-shadow 0.25s;
-}
-.formAddBtn:hover {
-  background-color: #256fbe;
-  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
-}
-.formAddBtn:focus,
-.formAddBtn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }

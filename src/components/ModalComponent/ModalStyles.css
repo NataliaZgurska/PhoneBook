@@ -10,12 +10,12 @@
 }
 
 .modal-content {
-  top: 50%;
+  top: 33%;
   left: 50%;
   right: auto;
   bottom: auto;
   margin-right: -50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -33%);
   padding: 20px;
   border-radius: 10px;
   background-color: #fff;

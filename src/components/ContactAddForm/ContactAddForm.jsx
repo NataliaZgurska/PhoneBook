@@ -12,7 +12,7 @@ import { addContact } from '../../redux/contacts/operations';
 import { selectFilter } from '../../redux/filters/selectors';
 import { clearFilter } from '../../redux/filters/slice';
 
-import css from './ContactForm.module.css';
+import css from './ContactAddForm.module.css';
 
 const FORM_INITIAL_VALUES = {
   name: '',
@@ -30,7 +30,7 @@ const FormSchema = Yup.object().shape({
     .required('Required'),
 });
 
-const ContactForm = ({ closeModal }) => {
+const ContactAddForm = ({ closeModal }) => {
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
 
@@ -39,7 +39,7 @@ const ContactForm = ({ closeModal }) => {
       const result = await dispatch(addContact(values));
       if (result.meta.requestStatus === 'fulfilled') {
         actions.resetForm();
-        closeModal(false);
+        closeModal();
       } else {
         throw new Error('Failed to submit');
       }
@@ -81,8 +81,8 @@ const ContactForm = ({ closeModal }) => {
             <Field
               type="text"
               name="name"
-              placeholder="Name"
-              className={css.formInput}
+              placeholder="name"
+              // className={css.formInput}
             />
 
             <ErrorMessage
@@ -96,8 +96,8 @@ const ContactForm = ({ closeModal }) => {
             <Field
               type="number"
               name="number"
-              placeholder="Number"
-              className={css.formInput}
+              placeholder="number"
+              // className={css.formInput}
             />
 
             <ErrorMessage
@@ -107,7 +107,7 @@ const ContactForm = ({ closeModal }) => {
             />
           </label>
 
-          <button type="submit" className={css.btn}>
+          <button type="submit" className="formBtn">
             Add contact
           </button>
         </Form>
@@ -116,4 +116,4 @@ const ContactForm = ({ closeModal }) => {
   );
 };
 
-export default ContactForm;
+export default ContactAddForm;

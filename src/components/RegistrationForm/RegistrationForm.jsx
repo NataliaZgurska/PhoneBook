@@ -103,7 +103,7 @@ const RegistrationForm = () => {
               />
             </label>
 
-            <button type="submit" className={css.formAddBtn}>
+            <button type="submit" className="formBtn">
               Register
             </button>
           </Form>

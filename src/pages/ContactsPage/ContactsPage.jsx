@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import ContactForm from '../../components/ContactForm/ContactForm';
+import ContactForm from '../../components/ContactAddForm/ContactAddForm';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ContactList from '../../components/ContactList/ContactList';
 import Loader from '../../components/Loader/Loader';
@@ -15,9 +15,9 @@ import { MdOutlineAdd } from 'react-icons/md';
 import css from './ContactsPage.module.css';
 import style from '../../services/btn.module.css';
 import Modal from 'react-modal';
-import ModalComponent from '../../components/ModalComponent/ModalComponent';
+import ContactAddModal from '../../components/ContactAddModal/ContactAddModal';
 
-Modal.setAppElement('#root');
+// Modal.setAppElement('#root');
 
 const ContactsPage = () => {
   // *****модальне вікно****
@@ -64,7 +64,8 @@ const ContactsPage = () => {
           <span className={style.tooltiptext}>Add Contact</span>
         </button>
 
-        <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} />
+        {/* <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} /> */}
+        <ContactAddModal isOpen={modalIsOpen} closeModal={closeModal} />
       </div>
 
       <ContactList />

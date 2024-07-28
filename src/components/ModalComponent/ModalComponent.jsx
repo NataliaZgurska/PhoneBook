@@ -17,6 +17,7 @@ const ModalComponent = ({ isOpen, closeModal, children }) => {
   return (
     <Modal
       isOpen={isOpen}
+      onRequestClose={() => closeModal()}
       className="modal-content"
       overlayClassName="modal-overlay"
       contentLabel="Example Modal"
@@ -25,7 +26,7 @@ const ModalComponent = ({ isOpen, closeModal, children }) => {
         <IoClose width="20" height="120" />
       </button>
 
-      <h2>Hello</h2>
+      {/* <h2>Hello</h2> */}
       {children}
     </Modal>
   );
