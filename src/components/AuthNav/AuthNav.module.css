@@ -5,15 +5,8 @@
   gap: 16px;
 }
 
-/* .nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 10px;
-} */
 .navLink {
   display: flex;
-  /* padding: 15px; */
   color: black;
   text-decoration: none;
 }

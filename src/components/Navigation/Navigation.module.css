@@ -9,16 +9,13 @@
   text-decoration: none;
   padding: 6px;
   font-weight: 700;
-  /* color: #2a363b; */
   color: white;
 }
 .navLink:hover {
-  /* color: blue; */
   color: rgb(238, 255, 47);
   text-decoration: underline;
 }
 .active {
-  /* color: blue; */
   color: rgb(238, 255, 47);
   text-decoration: underline;
 }

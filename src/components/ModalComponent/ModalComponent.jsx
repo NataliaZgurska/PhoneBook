@@ -7,7 +7,6 @@ const ModalComponent = ({ isOpen, closeModal, children }) => {
   useEffect(() => {
     // При відкритті модального вікна приховати скролл на фоні
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-
     // Відновити скролл при закритті модального вікна
     return () => {
       document.body.style.overflow = 'auto';

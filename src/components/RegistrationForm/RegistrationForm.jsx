@@ -51,7 +51,7 @@ const RegistrationForm = () => {
       <p className={css.welcomeText}>
         Register and use all the features of this application
       </p>
-      {/* <div className={css.formBackground}> */}
+
       <div>
         <Formik
           initialValues={FORM_INITIAL_VALUES}
@@ -60,7 +60,6 @@ const RegistrationForm = () => {
         >
           <Form className={css.form}>
             <label className={css.formLabel}>
-              {/* <span>Name:</span> */}
               <Field
                 type="text"
                 name="name"
@@ -75,7 +74,6 @@ const RegistrationForm = () => {
             </label>
 
             <label className={css.formLabel}>
-              {/* <span>Email:</span> */}
               <Field
                 type="email"
                 name="email"
@@ -89,7 +87,6 @@ const RegistrationForm = () => {
               />
             </label>
             <label className={css.formLabel}>
-              {/* <span>Password:</span> */}
               <Field
                 type="password"
                 name="password"

@@ -1,16 +1,13 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
+import { addContact } from '../../redux/contacts/operations';
 
 import {
   MAX_CHAR_NAME_VALIDATION,
   MIN_CHAR_NAME_VALIDATION,
 } from '../../utils/constants';
-
-import { addContact } from '../../redux/contacts/operations';
-import { selectFilter } from '../../redux/filters/selectors';
-import { clearFilter } from '../../redux/filters/slice';
 
 import css from './ContactAddForm.module.css';
 
@@ -50,22 +47,6 @@ const ContactAddForm = ({ closeModal }) => {
 
   return (
     <div className={css.formContainer}>
-      <Toaster
-        position="bottom-left"
-        reverseOrder={false}
-        toastOptions={{
-          duration: 4000,
-          error: {
-            style: {
-              border: '3px solid red',
-              background: '#363636',
-              color: '#fff',
-              padding: '16px',
-            },
-          },
-        }}
-      />
-
       <Formik
         initialValues={FORM_INITIAL_VALUES}
         validationSchema={FormSchema}
@@ -73,12 +54,7 @@ const ContactAddForm = ({ closeModal }) => {
       >
         <Form className={css.formAdd}>
           <label className={css.formLabel}>
-            <Field
-              type="text"
-              name="name"
-              placeholder="name"
-              // className={css.formInput}
-            />
+            <Field type="text" name="name" placeholder="name" />
 
             <ErrorMessage
               className={css.errorMessage}
