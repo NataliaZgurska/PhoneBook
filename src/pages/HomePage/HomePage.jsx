@@ -5,7 +5,6 @@ import ImageGallery from '../../components/ImageGallery/ImageGallery';
 import { TbReload } from 'react-icons/tb';
 
 import css from './HomePage.module.css';
-import style from '../../services/btn.module.css';
 
 const HomePage = () => {
   const [images, setImages] = useState(null);
@@ -40,11 +39,11 @@ const HomePage = () => {
         <div className={css.fixedBtn}>
           <button
             type="button"
-            className={style.btn}
+            className="btnSmall"
             onClick={() => location.reload()}
           >
             <TbReload size={30} />
-            <span className={style.tooltiptext}>Reload page</span>
+            <span className="tooltiptext">Reload page</span>
           </button>
         </div>
       </div>

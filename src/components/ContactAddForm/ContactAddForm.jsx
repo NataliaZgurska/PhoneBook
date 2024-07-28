@@ -93,12 +93,7 @@ const ContactAddForm = ({ closeModal }) => {
           </label>
 
           <label className={css.formLabel}>
-            <Field
-              type="number"
-              name="number"
-              placeholder="number"
-              // className={css.formInput}
-            />
+            <Field type="number" name="number" placeholder="number" />
 
             <ErrorMessage
               className={css.errorMessage}

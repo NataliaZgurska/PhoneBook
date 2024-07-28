@@ -111,4 +111,51 @@ body {
 .formBtn:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-/******************/
+
+/******* маленька кнопка ***********/
+.btnSmall {
+  width: 2em;
+  height: 30px;
+
+  position: relative;
+  display: inline-block;
+
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+  font-style: italic;
+  text-align: center;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+}
+.btnSmall:hover {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  color: yellow;
+}
+.btnSmall:focus,
+.btnSmall:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/******** Підказка маленької кнопки ********/
+.btnSmall .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: transparent;
+  color: gray;
+  text-align: center;
+  padding: 0;
+
+  top: 35px;
+  right: -130%;
+  position: absolute;
+  z-index: 1;
+}
+.btnSmall:hover .tooltiptext {
+  visibility: visible;
+}

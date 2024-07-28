@@ -3,7 +3,6 @@ import { selectUser } from '../../redux/auth/selectors';
 import { logout } from '../../redux/auth/operations';
 import { IoIosLogOut } from 'react-icons/io';
 import css from './UserMenu.module.css';
-import style from '../../services/btn.module.css';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -17,11 +16,11 @@ export const UserMenu = () => {
 
       <button
         type="button"
-        className={style.btn}
+        className="btnSmall"
         onClick={() => dispatch(logout())}
       >
         <IoIosLogOut size={30} />
-        <span className={style.tooltiptext}>LogOut</span>
+        <span className="tooltiptext">LogOut</span>
       </button>
     </div>
   );

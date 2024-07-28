@@ -32,24 +32,22 @@
 import { FaPhone } from 'react-icons/fa6';
 import { MdDeleteForever } from 'react-icons/md';
 import { useState } from 'react';
+import ContactDelModal from '../ContactDelModal/ContactDelModal';
 
 import css from './Contact.module.css';
-import ContactModal from '../ContactModal/ContactModal';
 
 const Contact = ({ contact }) => {
   const { name, number } = contact;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const onOpenModal = () => {
-    setIsModalOpen(true);
-    document.body.classList.add('modal-open');
+  // *****модальне вікно для видалення контакта****
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
   };
-
-  const onCloseModal = () => {
-    setIsModalOpen(false);
-    document.body.classList.remove('modal-open');
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
+  // *******
 
   return (
     <>
@@ -62,13 +60,18 @@ const Contact = ({ contact }) => {
             {number}
           </p>
         </div>
-        <button onClick={onOpenModal} className={css.deleteBtn}>
+        <button onClick={openModal} className={css.deleteBtn}>
           <MdDeleteForever size={30} className={css.deleteBtnImg} />
         </button>
       </div>
-      <ContactModal
+      {/* <ContactModal
         onCloseModal={onCloseModal}
         isModalOpen={isModalOpen}
+        contact={contact}
+      /> */}
+      <ContactDelModal
+        isOpen={modalIsOpen}
+        closeModal={closeModal}
         contact={contact}
       />
     </>

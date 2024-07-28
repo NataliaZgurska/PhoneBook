@@ -13,14 +13,12 @@ import { clearFilter } from '../../redux/filters/slice';
 import { MdOutlineAdd } from 'react-icons/md';
 
 import css from './ContactsPage.module.css';
-import style from '../../services/btn.module.css';
-import Modal from 'react-modal';
 import ContactAddModal from '../../components/ContactAddModal/ContactAddModal';
 
 // Modal.setAppElement('#root');
 
 const ContactsPage = () => {
-  // *****модальне вікно****
+  // *****модальне вікно для додавання контакта****
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const openModal = () => {
     setModalIsOpen(true);
@@ -59,12 +57,11 @@ const ContactsPage = () => {
         <SearchBox />
 
         {/* виклик модального вікна */}
-        <button type="button" className={style.btn} onClick={openModal}>
+        <button type="button" className="btnSmall" onClick={openModal}>
           <MdOutlineAdd size={30} />
-          <span className={style.tooltiptext}>Add Contact</span>
+          <span className="tooltiptext">Add Contact</span>
         </button>
 
-        {/* <ModalComponent isOpen={modalIsOpen} closeModal={closeModal} /> */}
         <ContactAddModal isOpen={modalIsOpen} closeModal={closeModal} />
       </div>
 

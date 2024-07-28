@@ -26,7 +26,6 @@ const ModalComponent = ({ isOpen, closeModal, children }) => {
         <IoClose width="20" height="120" />
       </button>
 
-      {/* <h2>Hello</h2> */}
       {children}
     </Modal>
   );
