@@ -25,10 +25,12 @@ const NotFoundPage = () => {
         Come back Home
       </Link>
 
-      <h3 className={css.timer}>
-        You will be redirected to <span>Home</span> in <span>{10 - timer}</span>{' '}
-        seconds
-      </h3>
+      <div className={css.timer}>
+        <h3>
+          You will be redirected to <span>Home</span> in{' '}
+          <span>{10 - timer}</span> seconds
+        </h3>
+      </div>
     </div>
   );
 };

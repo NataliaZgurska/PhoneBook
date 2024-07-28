@@ -18,13 +18,20 @@
 }
 
 .timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: blue;
+  background: linear-gradient(to right, #004ff9c7, #fff94cab, #004ff9c7);
+  border-radius: 30px;
+  height: 50px;
 }
 
-.timer span {
+/* .timer span {
   color: black;
-}
+ 
+} */
 
 @media screen and (min-width: 768px) {
   .container {

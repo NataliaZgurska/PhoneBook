@@ -23,6 +23,18 @@
   background-color: rgba(244, 244, 196, 1);
 }
 
+.noContacts {
+  margin-top: 40px;
+  color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.noContactsIcon {
+  color: black;
+}
+
 @media screen and (min-width: 768px) {
   .contactList {
     margin-top: 1em;

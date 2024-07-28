@@ -144,6 +144,7 @@ body {
   box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
   color: yellow;
 }
+
 .btnSmall:focus,
 .btnSmall:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

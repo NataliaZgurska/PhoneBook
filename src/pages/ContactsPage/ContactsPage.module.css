@@ -10,6 +10,37 @@
   padding-bottom: 10px;
 }
 
+.btnSmallActive {
+  background-color: #256fbe;
+  box-shadow: -4px 5px 5px 0px rgba(115, 111, 115, 1);
+  color: yellow;
+
+  animation: rotate360 2s linear infinite;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* @keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
 @media screen and (min-width: 1024px) {
   .formsContainer {
     flex-direction: row;
