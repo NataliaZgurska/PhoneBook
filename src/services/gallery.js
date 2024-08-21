@@ -13,6 +13,7 @@ const queryArray = [
   'sea',
   'life',
   'water',
+  'sunflowers',
 ];
 
 export const getImages = async () => {
